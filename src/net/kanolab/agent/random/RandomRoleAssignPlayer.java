@@ -1,13 +1,23 @@
 package net.kanolab.agent.random;
 
-import org.aiwolf.sample.lib.AbstractRoleAssignPlayer;
-//import org.aiwolf.sample.player.*;
+import org.aiwolf.sample.lib.*;
+import org.aiwolf.common.data.Player;
 
 public class RandomRoleAssignPlayer extends AbstractRoleAssignPlayer {
-	public String getName() {
-		return "RandomTalkPlayer";
+	private Player villagerPlayer, seerPlayer, mediumPlayer;
+	private Player bodyguardPlayer, possessedPlayer, werewolfPlayer,rolePlayer;
+	
+	public Player getRolePlayer() {
+		return rolePlayer;
 	}
-	public static void main(String args[]) {
-		System.out.println("success");
+
+
+	public void setRolePlayer(Player rolePlayer) {
+		this.rolePlayer = rolePlayer;
+	}
+
+
+	public String getName() {
+		return "RandomSamplePlayer";
 	}
 }

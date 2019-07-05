@@ -17,5 +17,7 @@
 			<attribute name="javadoc_location" value="jar:platform:/resource/RandomAgent/lib/aiwolf-docs-ver0.4.10.zip!/docs"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="lib/aiwolf-server.jar"/>
+	<classpathentry kind="lib" path="lib/aiwolf-viewer.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
