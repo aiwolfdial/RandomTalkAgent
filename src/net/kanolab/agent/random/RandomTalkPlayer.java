@@ -12,6 +12,7 @@ import java.util.Random;
 import org.aiwolf.common.data.Agent;
 import org.aiwolf.common.net.GameInfo;
 import org.aiwolf.common.net.GameSetting;
+import org.aiwolf.common.data.Talk;
 import org.aiwolf.client.lib.EstimateContentBuilder;
 
 /**
@@ -66,13 +67,16 @@ public class RandomTalkPlayer implements Player{
 	
 	public void dayStart() {
 		canTalk = true;
+		aliveOthers = currentGameInfo.getAliveAgentList();
+		aliveOthers.remove(me);
+		
 	}
 	
+	// 発話ログのリストからランダムに取得し発話
 	public String talk() {
 		int i = random.nextInt(talkList.size());
-		System.out.println("random talk:"+talkList.get(i));
-		return i+":"+talkList.get(i);
-//		return null;
+		return talkList.get(i);
+	
 	}
 	
 	public String whisper() {
@@ -81,18 +85,19 @@ public class RandomTalkPlayer implements Player{
 	
 	public Agent vote() {
 		canTalk = false;
-		return currentGameInfo.getAliveAgentList().get(0);
-	}
-	public Agent attack() {
-		return currentGameInfo.getAliveAgentList().get(0);
+		return aliveOthers.get(0);
 	}
 	
+	public Agent attack() {
+		return aliveOthers.get(0);
+	}
+
 	public Agent divine() {
-		return currentGameInfo.getAliveAgentList().get(0);
+		return aliveOthers.get(0);
 	}
 	
 	public Agent guard() {
-		return currentGameInfo.getAliveAgentList().get(0);
+		return aliveOthers.get(0);
 	}
 	
 	public void finish() {
@@ -113,28 +118,5 @@ public class RandomTalkPlayer implements Player{
 		}
 		return list;
 	}
-	
-//	public Player getVillagerPlayer() 	{	return this;	}
-//	public Player getSeerPlayer() 		{	return this;	}
-//	public Player getMediumPlayer() 	{	return this;	}
-//	public Player getBodyguardPlayer() {	return this;	}
-//	public Player getPossessedPlayer() {	return this;	}
-//	public Player getWerewolfPlayer() 	{	return this;	}
-//	public Player getRolePlayer() 		{	return this;	}
-//
-//	public void setVillagerPlayer(Player villagerPlayer) {	this.player = villagerPlayer; }
-//	public void setSeerPlayer(Player seerPlayer) {	this.player = seerPlayer;	}
-//	public void setMediumPlayer(Player mediumPlayer) {	this.player = mediumPlayer;}
-//	public void setBodyguardPlayer(Player bodyguardPlayer) {	this.player = bodyguardPlayer;}
-//	public void setPossessedPlayer(Player possessedPlayer) {	this.player = possessedPlayer;}
-//	public void setWerewolfPlayer(Player werewolfPlayer) {	this.player = werewolfPlayer;}
-//	public void setRolePlayer(Player rolePlayer) {	this.player = rolePlayer;}
-	
-//	public static void main(String args[]) {
-//		RandomTalkPlayer player = new RandomTalkPlayer();
-//		System.out.println(player.getName());
-//		for(int i = 0; i < 30; i++) {
-//			System.out.println(player.talk());
-//		}
-//	}
+
 }
