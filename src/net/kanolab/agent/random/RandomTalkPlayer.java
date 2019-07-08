@@ -17,7 +17,7 @@ import org.aiwolf.client.lib.EstimateContentBuilder;
 
 /**
  * 
- * 
+ * An sample agent player class that makes random utterance from past game logs.
  * @author ymaki
  *
  */
