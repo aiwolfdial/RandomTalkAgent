@@ -27,7 +27,7 @@ public class RandomTalkPlayer implements Player{
 	
 	// 発話ログファイルのパス
 	// Log file of previous games, randomly selected to make talks
-	private final String logPath = "./source/2019071_44011_AIWolfTalkLogs.txt";
+	private final String logPath = "./res/2019071_44011_AIWolfTalkLogs.txt";
 	// ログファイルから読み込んだ発話を保持
 	// List of String to cache all of the log file contents
 	private List<String> talkList;
@@ -119,7 +119,6 @@ public class RandomTalkPlayer implements Player{
 	 */
 	@Override
 	public Agent vote() {
-		canTalk = false;
 		return aliveOthers.get(0);
 	}
 	

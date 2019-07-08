@@ -62,7 +62,7 @@ public class AutoStarter {
 
 	private TcpipDirectServer gameServer;
 
-	private String settingFileName = "../RandomAgent/source/GameSetting.cfg";
+	private String settingFileName = "../RandomAgent/res/GameSetting.cfg";
 	private GameSetting gameSetting;
 	boolean isRunning;
 	boolean isSuccessToFinish;
