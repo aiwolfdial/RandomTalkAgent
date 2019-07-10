@@ -78,6 +78,8 @@ public class AutoStarter {
 	private Map<String, Class> playerClassMap;
 	private Map<String, ProgType> agentTypeMap;
 	AIWolfResource resource;
+	
+	static boolean isNetwork = true;
 
 	/**
 	 * Path to C# ClientSterter.exe
@@ -102,7 +104,7 @@ public class AutoStarter {
 		System.out.println(args[0]);
 		AutoStarter ssbi = new AutoStarter(args[0]);
 		ssbi.start();
-		ssbi.result();
+		if(!isNetwork) ssbi.result();
 		System.exit(1);
 	}
 
@@ -215,10 +217,11 @@ public class AutoStarter {
 	 * @throws ClassNotFoundException
 	 */
 	public void start() throws SocketTimeoutException, IOException, InstantiationException, IllegalAccessException, ClassNotFoundException{
-		createServer();
+		
+		if(!isNetwork) createServer();
 		startJavaClient();
-		startServer();
-		startTcpipClient();
+		if(!isNetwork) startServer();
+		if(!isNetwork) startTcpipClient();
 
 		while(initServer || isRunning){
 			try {
@@ -273,6 +276,7 @@ public class AutoStarter {
 	protected void startJavaClient() throws InstantiationException, IllegalAccessException, ClassNotFoundException, IOException {
 		List<String> nameList = new ArrayList<>(roleAgentMap.keySet());
 //		Collections.shuffle(nameList);
+		if(isNetwork) isRunning = true;
 		for(String playerName:nameList){
 			PlayerInfo playerInfo = roleAgentMap.get(playerName);
 			String classPath = playerInfo.getTarget();
@@ -318,29 +322,31 @@ public class AutoStarter {
 //				isHumanPlayer = false;
 			}
 
-			gameServer.add(playerName, player, role);
-
-//			//引数にRoleRequestを追加
-//			final TcpipClient client = new TcpipClient("localhost", port, role);
-//			if(playerName != null){
-//				client.setName(playerName);
-////				System.out.println("Set name "+client.getName());
-//			}
-//
-//			final Player p = player;
-//			Runnable r = new Runnable() {
-//
-//				@Override
-//				public void run() {
-//					if(client.connect(p)){
-////						System.out.println("Player connected to server:"+player);
-//					}
-//				}
-//			};
-//			Thread t = new Thread(r);
-//			t.start();
+			if(!isNetwork) gameServer.add(playerName, player, role);
+			else {
+				//引数にRoleRequestを追加
+				final TcpipClient client = new TcpipClient("160.16.83.206", 10001, role);
+				if(playerName != null){
+					client.setName(playerName);
+	//				System.out.println("Set name "+client.getName());
+				}
+	
+				final Player p = player;
+				Runnable r = new Runnable() {
+	
+					@Override
+					public void run() {
+						if(client.connect(p)){
+	//						System.out.println("Player connected to server:"+player);
+						}
+					}
+				};
+				Thread t = new Thread(r);
+				t.start();
+			}
 
 		}
+		if(!isNetwork) isRunning = false;
 
 	}
 

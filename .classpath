@@ -18,5 +18,6 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="lib/aiwolf-server.jar"/>
 	<classpathentry kind="lib" path="lib/aiwolf-viewer.jar"/>
+	<classpathentry kind="lib" path="lib/jsonic-1.3.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
