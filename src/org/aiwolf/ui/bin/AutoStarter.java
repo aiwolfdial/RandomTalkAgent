@@ -79,7 +79,7 @@ public class AutoStarter {
 	private Map<String, ProgType> agentTypeMap;
 	AIWolfResource resource;
 	
-	static boolean isNetwork = true;
+	static boolean isNetwork;
 
 	/**
 	 * Path to C# ClientSterter.exe
@@ -145,6 +145,9 @@ public class AutoStarter {
 				}
 				else if(data[0].trim().equals("view")){
 					isVisualize = "true".equals(data[1].trim().toLowerCase());
+				}
+				else if(data[0].trim().equals("network")){
+					isNetwork = "true".equals(data[1].trim().toLowerCase());
 				}
 				else if(data[0].trim().equals("setting")){
 					settingFileName = data[1].trim();
