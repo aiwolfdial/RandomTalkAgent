@@ -97,12 +97,14 @@ public class AutoStarter {
 	 * @throws IOException
 	 */
 	public static void main(String[] args) throws InstantiationException, IllegalAccessException, ClassNotFoundException, IOException {
+		AutoStarter ssbi;
 		if(args.length == 0){
-			System.err.println("Usage:"+AutoStarter.class.getName()+" initFileName");
-			return;
+//			System.err.println("Usage:"+AutoStarter.class.getName()+" initFileName");
+			ssbi = new AutoStarter("./res/AutoStarter.ini");
+		}else {
+			System.out.println(args[0]);
+			ssbi = new AutoStarter(args[0]);
 		}
-		System.out.println(args[0]);
-		AutoStarter ssbi = new AutoStarter(args[0]);
 		ssbi.start();
 		if(!isNetwork) ssbi.result();
 		System.exit(1);
