@@ -18,4 +18,5 @@ in the .ini file above. The server location is currently
 host: "160.16.83.206"
 port: 10001
 
+人狼知能大会 自然言語部門のサンプルエージェントのページです。
 
