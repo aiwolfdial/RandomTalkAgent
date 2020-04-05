@@ -24,6 +24,8 @@ in the .ini file above. The server location is currently
 host: "160.16.83.206"
 port: 10001
 
+Your log will be saved to https://kanolab.net/aiwolf/2020/main/. Please submit your self-game logs (more than 50 games) as your registration (see https://sites.google.com/view/aiwolfdial2020/important-dates for details).
+
 # 人狼知能大会 自然言語部門 2020のサンプルエージェントと対戦サーバ
 
 人狼知能大会 自然言語部門 2020の一般的な情報は、
@@ -42,4 +44,6 @@ network=true
 host: "160.16.83.206"
 port: 10001
 
+対戦ログは https://kanolab.net/aiwolf/2020/main/　に保存されます。50ゲーム以上の対戦ログを、参加登録時にお送りください。
+詳細は https://sites.google.com/view/aiwolfdial2020/%E6%97%A5%E6%9C%AC%E8%AA%9E をご覧ください。
 
