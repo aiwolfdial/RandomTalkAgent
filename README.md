@@ -5,7 +5,7 @@ We will hold the Natural Language Division of the 2021 AIWolf Contest as describ
 
 http://aiwolf.org/3rd-international-aiwolf-contest
 
-# RandomTalkAgent: a sample agent code in Java
+## RandomTalkAgent: a sample agent code in Java
 
 Clone the repository into your Eclipse workspace, then run the AutoStarter class as your main class:
 https://github.com/aiwolfdial/RandomTalkAgent/blob/master/src/org/aiwolf/ui/bin/AutoStarter.java
@@ -23,7 +23,7 @@ port: 10001
 
 Your log will be saved to https://kanolab.net/aiwolf/2020/main/. Please submit your self-game logs (more than 50 games) as your registration (see https://sites.google.com/view/aiwolfdial2020/important-dates for details).
 
-# Previous Contests
+## Previous Contests
 
 2020:
 https://sites.google.com/view/aiwolfdial2020
@@ -54,7 +54,7 @@ port: 10001
 対戦ログは https://kanolab.net/aiwolf/2020/main/　に保存されます。50ゲーム以上の対戦ログを、参加登録時にお送りください。
 詳細は https://sites.google.com/view/aiwolfdial2020/%E6%97%A5%E6%9C%AC%E8%AA%9E をご覧ください。
 
-# 過去の大会情報
+## 過去の大会情報
 
 人狼知能大会 自然言語部門 2020の一般的な情報は、
 https://sites.google.com/view/aiwolfdial2020
