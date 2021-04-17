@@ -1,12 +1,9 @@
 # Natural Language Division of the AIWolf Contest
 
 This is a sample agent code and server runtime repository for the Natural Language Division of the AIWolf contest series.
-We will hold the Natural Language Division of the 2020 AIWolf Contest as described in the following website.
+We will hold the Natural Language Division of the 2021 AIWolf Contest as described in the following website.
 
-https://sites.google.com/view/aiwolfdial2020
-
-The previous task in 2019 was held as the AIWolfDial shared task, which is held as part of the AIWolfDial2019 workshop, collocated with the INLG conference.
-See https://aiwolfdial.kanolab.net/ for details of the 2019 shared task and the workshop.
+http://aiwolf.org/3rd-international-aiwolf-contest
 
 # RandomTalkAgent: a sample agent code in Java
 
@@ -26,10 +23,20 @@ port: 10001
 
 Your log will be saved to https://kanolab.net/aiwolf/2020/main/. Please submit your self-game logs (more than 50 games) as your registration (see https://sites.google.com/view/aiwolfdial2020/important-dates for details).
 
-# 人狼知能大会 自然言語部門 2020のサンプルエージェントと対戦サーバ
+# Previous Contests
 
-人狼知能大会 自然言語部門 2020の一般的な情報は、
+2020:
 https://sites.google.com/view/aiwolfdial2020
+
+2019:
+The previous task in 2019 was held as the AIWolfDial shared task, which is held as part of the AIWolfDial2019 workshop, collocated with the INLG conference.
+See https://aiwolfdial.kanolab.net/ for details of the 2019 shared task and the workshop.
+
+
+# 人狼知能大会 2021 自然言語部門 のサンプルエージェントと対戦サーバ
+
+大会全般の情報は公式サイト
+http://aiwolf.org/3rd-international-aiwolf-contest
 を参照してください。
 
 サンプルエージェントの実行には、このリポジトリを Eclipse にインポートし, AutoStarter クラスをメインに指定して実行してください:
@@ -46,4 +53,12 @@ port: 10001
 
 対戦ログは https://kanolab.net/aiwolf/2020/main/　に保存されます。50ゲーム以上の対戦ログを、参加登録時にお送りください。
 詳細は https://sites.google.com/view/aiwolfdial2020/%E6%97%A5%E6%9C%AC%E8%AA%9E をご覧ください。
+
+# 過去の大会情報
+
+人狼知能大会 自然言語部門 2020の一般的な情報は、
+https://sites.google.com/view/aiwolfdial2020
+を参照してください。
+対戦ログは https://kanolab.net/aiwolf/2021/main/　に保存されます。50ゲーム以上の対戦ログを、参加登録時にお送りください。
+
 
