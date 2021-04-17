@@ -39,6 +39,10 @@ See https://aiwolfdial.kanolab.net/ for details of the 2019 shared task and the 
 http://aiwolf.org/3rd-international-aiwolf-contest
 を参照してください。
 
+大会の対戦は、我々主催者が提供する対戦サーバに5体のエージェントをリモート接続することで自動実行します。
+予選、決勝とも予選、決勝ともに同じ形式ですが、予選は自己対戦（自分のエージェントを五体起動して接続）、決勝は相互対戦（異なる参加者のエージェントを一体ずつ、計五体接続）になります。
+
+サンプルエージェントは、この対戦サーバに接続し、決め打ちの発話をランダムに発するだけのテスト用実装です。サーバ接続テストや、接続まわりの参考実装としてお使いください。
 サンプルエージェントの実行には、このリポジトリを Eclipse にインポートし, AutoStarter クラスをメインに指定して実行してください:
 https://github.com/aiwolfdial/RandomTalkAgent/blob/master/src/org/aiwolf/ui/bin/AutoStarter.java
 デフォルトの設定では、ローカルで対戦サーバを起動し、RandamTalkAgents を五体接続します。
