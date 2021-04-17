@@ -56,9 +56,8 @@ host: "160.16.83.206"
 port: 10001
 
 対戦ログは 
-https://kanolab.net/aiwolf/2020/main/　
-に保存されます。50ゲーム以上の対戦ログを、参加登録時にお送りください。
-詳細は 
+https://kanolab.net/aiwolf/2021/main/
+に保存されます。50ゲーム以上の対戦ログを、参加登録時にお送りください。詳細は 
 https://sites.google.com/view/aiwolfdial2020/%E6%97%A5%E6%9C%AC%E8%AA%9E 
 をご覧ください。
 
@@ -66,9 +65,8 @@ https://sites.google.com/view/aiwolfdial2020/%E6%97%A5%E6%9C%AC%E8%AA%9E
 
 人狼知能大会 自然言語部門 2020の一般的な情報は、
 https://sites.google.com/view/aiwolfdial2020
-を参照してください。
-対戦ログは 
-https://kanolab.net/aiwolf/2021/main/　
+を参照してください。対戦ログは 
+https://kanolab.net/aiwolf/2020/main/
 に保存されます。50ゲーム以上の対戦ログを、参加登録時にお送りください。
 
 
