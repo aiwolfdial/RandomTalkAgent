@@ -62,7 +62,7 @@ https://sites.google.com/view/aiwolfdial2020/%E6%97%A5%E6%9C%AC%E8%AA%9E
 をご覧ください。
 
 ## 対戦ログの例（自己対戦の場合）
-
+<pre>
 0,status,1,POSSESSED,ALIVE,Kanolab
 0,status,2,VILLAGER,ALIVE,Kanolab
 0,status,3,WEREWOLF,ALIVE,Kanolab
@@ -141,7 +141,7 @@ https://sites.google.com/view/aiwolfdial2020/%E6%97%A5%E6%9C%AC%E8%AA%9E
 3,status,4,SEER,DEAD,Kanolab
 3,status,5,VILLAGER,DEAD,Kanolab
 3,result,0,1,WEREWOLF
-
+</pre>
 
 ## 過去の大会情報
 
