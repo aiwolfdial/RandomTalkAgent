@@ -207,6 +207,8 @@ We will hold the Natural Language Division of the 2021 AIWolf Contest as describ
 http://aiwolf.org/3rd-international-aiwolf-contest
 All of the required information is describe in this README.
 
+Regsitration deadline for the 2021 contest is July 31, 2021.
+
 ## Previous Contests
 
 2020:
@@ -387,6 +389,8 @@ https://github.com/aiwolfdial/RandomTalkAgent/blob/master/res/AutoStarter.ini
 大会全般の情報は公式サイト
 http://aiwolf.org/3rd-international-aiwolf-contest
 も参照してください。自然言語部門に関しては、このREADMEにすべての情報が記載されています。
+
+大会へのチーム登録の締め切りは，2021年7月31日です．
 
 ## 過去の大会情報
 
