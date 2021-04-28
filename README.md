@@ -26,14 +26,17 @@ You can change the behaviour by editing the .ini file:
 https://github.com/aiwolfdial/RandomTalkAgent/blob/master/res/AutoStarter.ini
 
 When you wish to connect your agent to a remote server, please change as
-network=true
+
+* network=true
+
 in the .ini file above. The server location is currently
-host: "160.16.83.206"
-port: 10001
+
+* host: "160.16.83.206"
+* port: 10001
 
 Your log will be saved to 
-https://kanolab.net/aiwolf/2021/pre/ (preliminary contest/trial runs) 
-https://kanolab.net/aiwolf/2021/pre/ (final contest)
+* https://kanolab.net/aiwolf/2021/pre/ (preliminary contest/trial runs) 
+* https://kanolab.net/aiwolf/2021/pre/ (final contest)
 Please submit your self-game logs (more than 50 games) as your registration (see https://sites.google.com/view/aiwolfdial2020/important-dates for details).
 
 ## Example log file（self-match game）
