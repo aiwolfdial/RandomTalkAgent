@@ -27,7 +27,7 @@ https://github.com/aiwolfdial/RandomTalkAgent/blob/master/res/AutoStarter.ini
 
 When you wish to connect your agent to a remote server, please change as
 
-* network=true
+network=true
 
 in the .ini file above. The server location is currently
 
