@@ -2,10 +2,73 @@
 
 <b>日本語の情報は後半にあります。</b>
 
-This is a sample agent code and server runtime repository for the Natural Language Division of the AIWolf contest series.
-We will hold the Natural Language Division of the 2021 AIWolf Contest as described in the following website.
+## Background
 
-http://aiwolf.org/3rd-international-aiwolf-contest
+We have been annually holding the AI werewolf contests under the AI Werewolf project. The AI werewolf contest has two divisions, the protocol division and the natural language division. The protocol division asks participants to implement an AI werewolf player agent that communicates in a middle language called the AI werewolf protocol. The natural language division asks participants to implement an AI werewolf agent that communicates in natural language. 
+
+## The Werewolf Game in this Shared Task
+
+Agents of the AIWolf NL Division will play the werewolf game of five players, including roles of a seer, a werewolf, a possessed, and two villagers. Players do not know other players' roles. All players, other than the werewolf, are humans. 
+
+A game consists of a couple of days, continuing until the human team or the werewolf team survives. A werewolf can specify and attack another player in the end of the day; the attached player will be eliminated from the game. All of players are required to vote to another player, and a player voted most will be eliminated from the game. When humans survive, the villager team wins. When a werewolf survives, the werewolf team wins. A possessed is a human but belongs to the werewolf team. A seer can specify another player in the end of the day, then either human or werewolf is notified.       
+
+## Agent Technical Specifications
+
+### Language Requirement
+
+A shared task participant of AIWolf NL Division is required to implement an AI werewolf agent that communicate either in English or Japanese. Agents of the Japanese language are required to make an English version, at least by using machine translation internally.  
+
+### AIWolf Agent APIs
+
+A shared task participant of AIWolf NL Division is required to implement an AI werewolf agent that connects to our AIWolf server via network. Therefore, there is no limitation on the client side hardware/software other than the network I/O specifications. 
+
+### Agent Specification
+
+* Day 0 has greetings only.
+* The end of Day 0 has an inspection by a seer, and the game starts from Day 1. 
+* After Day 1, the end of the days have votes by all players and an attack by a werewolf. Vote, attack, inspection are made via specific APIs (network communications).  
+* A day consists of a couple turns, where all of agents can make a talk for each turn, receiving talks of previous turns. 
+* (New from 2020) An agent is required to talk for each turn in the day, but the order within a talk is random. An agent could be asked to make a talk just after the previous talk, or after 8 talks (2 talks of 4 other agents) of other agents. 
+* An agent should make a talk within a specified periods after a talk request is sent. 
+* During days, Agents can communicate anything in natural language.  A talk should consists of normal letters and punctuations only. An agent returns "Skip" when nothing to talk, returns "Over" if nothing to talk anymore in that day.   
+* Use Agent[0x] (e.g. Agent[05], x is 1-5)  to mention other agents．
+* An anchor e.g. ">>Agent[0x]" could be inserted at the beginning of a talk to refer to another agent, to whom your agent with to talk with. That agent is assumed to respond something to your agent by using an anchor.
+
+## From Registration to Formal Run
+
+### Registration
+
+A team should send a mail to aiwolf at kanolab.net (replace at by @) to register the shared task, describing your team name, a contact e-mail address, names and affiliations of your members (please mark a contact person when a team consists of multiple members), communication language (English and/or Japanese) of your agent. There is no fee required to register/participate the shared task. You will be notified our preliminary and formal run server location after registration.
+
+### Testing Your Agent System Beforehand
+
+A shared task participant of AIWolfDial 2020 is required to implement an AI werewolf agent that connects to our AIWolf server at the specified timing. We will provide an AIWolf server running, where participants can try connecting with dummy agents to check their system behavior. Participants are required to check their systems certainly work before the shared task run.
+
+### Preliminary Run 
+
+Participants should run your five agents connected to our server, running 50 games. Then submit your game logs to the organisers via e-mail. If there are too many participants to run the formal run, organisers might select formal run teams depending on these logs. In either case, these logs will be used in the final evaluations.
+
+### Formal Run 
+
+A participant team is required to connect an agent to our server at a specified timing to play games with other participants. If your team cannot remotely attend the formal run, you should prepare your system where the organisers can somehow trigger your remote system to connect our server and run, e.g. by via a web browser. 
+
+### System Evaluation
+
+Participants should submit a system design description document to the organizers. This document and logs of the games might be used for research purpose and included and published in our overview paper without any further permission. Participants are encouraged to submit a paper to the workshop.
+
+Games will be between the same agents, different agents, and/or human players. Reviewers will perform subjective evaluations on the game logs, using following criteria:
+
+* A Natural utterance expressions
+* B Contextually natural conversation
+* C Coherent (not contradictory) conversation 
+* D Coherent game actions (vote, attack, divine) with conversation contents 
+* E Diverse utterance expressions, including coherent characterization 
+
+Please not that vague utterances, that can be used regardless of contexts, are not always natural in the werewolf game.
+
+# Sample Agent Code
+
+This is a sample agent code and server runtime repository for the Natural Language Division of the AIWolf contest series.
 
 The contest will be held automatically by connecting five agents to our remote server. 
 We provide the same game server which can run locally, and a sample agent for your development/test uses.
@@ -17,20 +80,16 @@ This agent is a reference implementation for server testing and connections in y
 
 ## RandomTalkAgent: a sample agent code in Java
 
-Clone the repository into your Eclipse workspace, then run the AutoStarter class as your main class:
-https://github.com/aiwolfdial/RandomTalkAgent/blob/master/src/org/aiwolf/ui/bin/AutoStarter.java
+Please clone the repository to your Eclipse environment and run the org.aiwolf.ui.bin.AutoStarter class with specifying AutoStarter.ini as its program argumen* https://github.com/aiwolfdial/RandomTalkAgent/blob/master/src/org/aiwolf/ui/bin/AutoStarter.java
 
 By default, this class will run a server and connect five RandamTalkAgents.
 
 You can change the behaviour by editing the .ini file:
-https://github.com/aiwolfdial/RandomTalkAgent/blob/master/res/AutoStarter.ini
+* https://github.com/aiwolfdial/RandomTalkAgent/blob/master/res/AutoStarter.ini
 
 When you wish to connect your agent to a remote server, please change as
-
-network=true
-
+* network=true
 in the .ini file above. The server location is currently
-
 * host: "160.16.83.206"
 * port: 10001
 
@@ -142,6 +201,12 @@ Please submit your self-game logs (more than 50 games) as your registration (see
 2,result,4,0,VILLAGER
 </pre>
 
+## AIWolf Contest 2021
+
+We will hold the Natural Language Division of the 2021 AIWolf Contest as described in the following website.
+http://aiwolf.org/3rd-international-aiwolf-contest
+All of the required information is describe in this README.
+
 ## Previous Contests
 
 2020:
@@ -223,16 +288,16 @@ java.lang.ClassNotFoundException: com.sun.java.swing.plaf.windows.WindowsClassic
 https://github.com/aiwolfdial/RandomTalkAgent/blob/master/res/AutoStarter.ini
 
 運営の提供する対戦サーバへリモート接続する場合は、
-network=true
+* network=true
 と変更します。サーバのIPアドレス、ポート番号は以下の通りです。10001番に接続できるよう、ファイアウォールの設定が必要です。
-host: "160.16.83.206"
-port: 10001
+* host: "160.16.83.206"
+* port: 10001
 
 対戦ログは 
-https://kanolab.net/aiwolf/2021/pre/ (予選およびテスト用)
-https://kanolab.net/aiwolf/2021/main/ (決勝)
+* https://kanolab.net/aiwolf/2021/pre/ (予選およびテスト用)
+* https://kanolab.net/aiwolf/2021/main/ (決勝)
 に保存されます。50ゲーム以上の対戦ログを、参加登録時にお送りください。詳細は 
-https://sites.google.com/view/aiwolfdial2020/%E6%97%A5%E6%9C%AC%E8%AA%9E 
+* https://sites.google.com/view/aiwolfdial2020/%E6%97%A5%E6%9C%AC%E8%AA%9E 
 をご覧ください。
 
 ## 対戦ログの例（自己対戦の場合）
@@ -319,10 +384,9 @@ https://sites.google.com/view/aiwolfdial2020/%E6%97%A5%E6%9C%AC%E8%AA%9E
 
 # 人狼知能大会 2021 自然言語部門 
 
-対戦方法や実装の技術的詳細は、上記の通りです。
 大会全般の情報は公式サイト
 http://aiwolf.org/3rd-international-aiwolf-contest
-を参照してください。
+も参照してください。自然言語部門に関しては、このREADMEにすべての情報が記載されています。
 
 ## 過去の大会情報
 
