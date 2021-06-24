@@ -2,6 +2,9 @@
 
 <b>日本語の情報は後半にあります。</b>
 
+New! Regsitration deadline (with submission of self-match game logs) for the 2021 contest has extended to **July 30**, 2021 (2021/6/24)
+大会へのチーム登録の締め切り（予選＝自己対戦のログ提出も同時です）は**2021年7月30日**に延長されました!(2021/6/24)
+
 ## Background
 
 We have been annually holding the AI werewolf contests under the AI Werewolf project. The AI werewolf contest has two divisions, the protocol division and the natural language division. The protocol division asks participants to implement an AI werewolf player agent that communicates in a middle language called the AI werewolf protocol. The natural language division asks participants to implement an AI werewolf agent that communicates in natural language. 
@@ -207,8 +210,7 @@ We will hold the Natural Language Division of the 2021 AIWolf Contest as describ
 http://aiwolf.org/3rd-international-aiwolf-contest
 All of the required information is describe in this README.
 
-Regsitration deadline for the 2021 contest is ~~July 31~~ **June 30**, 2021.
-We specified wrong date (July 31), please let us know if you have any trouble regarding this correction.
+New! Regsitration deadline (with submission of self-match game logs) for the 2021 contest has extended to **July 30**, 2021 (2021/6/24)
 
 ## Previous Contests
 
@@ -391,8 +393,7 @@ https://github.com/aiwolfdial/RandomTalkAgent/blob/master/res/AutoStarter.ini
 http://aiwolf.org/3rd-international-aiwolf-contest
 も参照してください。自然言語部門に関しては、このREADMEにすべての情報が記載されています。
 
-大会へのチーム登録の締め切りは~~2021年7月31日~~**2021年6月30日**です。
-もともと指定されていた7/31は記載ミスでした。大変申し訳ございません。もし登録が間に合わなかったなど問題がありましたら、主催者（aiwolf　at kanolab.net）あてお知らせください。
+大会へのチーム登録の締め切り（予選＝自己対戦のログ提出も同時です）は**2021年7月30日**に延長されました!(2021/6/24)
 
 ## 過去の大会情報
 
