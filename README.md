@@ -3,6 +3,7 @@
 <b>日本語の情報は後半にあります。</b>
 
 New! Regsitration deadline (with submission of self-match game logs) for the 2021 contest has extended to **July 30**, 2021 (2021/6/24)
+
 大会へのチーム登録の締め切り（予選＝自己対戦のログ提出も同時です）は**2021年7月30日**に延長されました!(2021/6/24)
 
 ## Background
