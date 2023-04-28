@@ -2,7 +2,7 @@
 
 ## News
 
-* Updated this website for AIWolfDial NL 2023
+* Updated this website for AIWolfDial NL 2023 (2023/4/28)
   - AIWolf Contest will be presented at INLG 2023 Generation Challenge https://inlg2023.github.io/ (Prague, September 11-15, 2023)
   - Registration deadeline of the Natural Language Division is **June 30th**
 
