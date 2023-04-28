@@ -10,6 +10,10 @@
 
 ## Background
 
+Recent achievements of generation models, e.g. ChatGPT, are gathering greater attentions. However, such a huge language model would not be sufficiently able to handle coherent responses, longer contexts, common grounds, and logics. 
+
+AIWolfDial 2023, which is an international open contest for automatic players of the conversation game "Mafia", requires players not just to communicate but to infer, persuade, deceive other players via coherent logical conversations, while having the role-playing non-task-oriented chats as well. We believe that this contest reveals current issues in the recent huge language models, showing directions of next breakthrough in this area. 
+
 We have been annually holding the AI werewolf contests under the AI Werewolf project. The AI werewolf contest has two divisions, the protocol division and the natural language division. The protocol division asks participants to implement an AI werewolf player agent that communicates in a middle language called the AI werewolf protocol. The natural language division asks participants to implement an AI werewolf agent that communicates in natural language. 
 
 ## The Werewolf Game in this Shared Task
@@ -246,6 +250,9 @@ Kei Harada, The University of Electro-Communications, Japan
 
 「汝は人狼なりや？」（以下、「人狼ゲーム」）は、話し合いを通じて行われるコミュニケーションゲームです。プレイヤーは勝つために自分自身の認知能力を十分に発揮しなければなりません。人狼ゲームはチェスやリバーシなどの完全情報ゲームとは異なり、隠された情報のある不完全情報ゲームです。各プレイヤーは目的を達成するために、他のプレイヤーの会話や行動から、隠された情報を推測し、役割に応じて自分の情報は隠しつつ行動します。プレイヤーは信頼を得るために説得し、嘘つきを見つけるために推測を行うことが必要です。
 
+自然言語部門は、人間さながらに自然言語で人狼ゲームをプレイするエージェントの部門です。
+ChatGPTをはじめとする大規模言語モデル（LLM）の性能向上は目覚ましいものがあり、注目を集めています。しかし、そのような巨大な言語モデルが、首尾一貫した応答、より長いコンテキスト、根拠のある応答、そして論理的な推論をどこまでできるのかは未知数です。
+人狼ゲームのプレイヤーは単にコミュニケーションするだけでなく、一貫した論理的な会話を通じて他のプレイヤーの役割を推測し、説得する役割を果たすと同時に、雑談も混ざる特徴があります。人狼の自動プレイを通じて、大規模言語モデルの能力とその限界が明らかになると期待します。
 人狼ゲームは対話を通じて行われますので、対話システムの研究という側面もあります。対話システムの研究は盛んですが、一貫した文脈や複雑な文で自然な会話をするにはまだ不十分です。根本的な問題の1つとして、適切な評価の欠如があります。対話システムの新しい評価方法として、この人狼ゲームの利用を提案します。
 
 人狼ゲームでは、プレイヤーは嘘をつき、説得し、嘘を発見しなければならないので、矛盾や曖昧な反応は「不自然な」ものとして評価され、ゲームで負けてしまいます。さらに、人狼ゲームではあらゆる会話が可能なので、タスク指向および非タスク指向の両方の会話を含んでいます。タスク志向と非タスク志向の中間であることから、完全に自由な対話よりも開発や評価をフォーカスさせやすく、人狼ゲームを評価基準にすることで、より相手の発話を踏まえた自然な対話システムが構築できると期待しています。
