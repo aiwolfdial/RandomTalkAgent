@@ -228,6 +228,18 @@ https://sites.google.com/view/aiwolfdial2020
 The previous task in 2019 was held as the AIWolfDial shared task, which is held as part of the AIWolfDial2019 workshop, collocated with the INLG conference.
 See https://aiwolfdial.kanolab.net/ for details of the 2019 shared task and the workshop.
 
+## Organizers
+
+Yoshinobu Kano, Shizuoka University, Japan  
+Claus Aranha, Tsukuba University  
+Takashi Otsuki, Yamagata University, Japan  
+Fujio Toriumi, The University of Tokyo, Japan  
+Hirotaka Osawa, Keio University, Japan  
+Daisuke Katagami, Tokyo Polytechnic University, Japan  
+Michimasa Inaba, The University of Electro-Communications, Japan  
+Kei Harada, The University of Electro-Communications, Japan  
+
+
 # 人狼知能大会 自然言語部門 について
 
 ## 目的
@@ -407,4 +419,13 @@ https://sites.google.com/view/aiwolfdial2020
 https://kanolab.net/aiwolf/2020/main/
 に保存されます。50ゲーム以上の対戦ログを、参加登録時にお送りください。
 
+## オーガナイザー
 
+狩野芳伸（静岡大学）  
+Claus Aranha（筑波大学）  
+大槻恭士（山形大学）  
+鳥海不二夫（東京大学）  
+大澤博隆（慶應義塾大学）  
+片上大輔（東京工芸大学）  
+稲葉道将（電気通信大学）  
+原田慧（電気通信大学）  
