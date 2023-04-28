@@ -1,10 +1,12 @@
 # Natural Language Division of the AIWolf Contest
 
+## News
+
+* Updated this website for AIWolfDial NL 2023
+  - AIWolf Contest will be presented at INLG 2023 Generation Challenge https://inlg2023.github.io/ (Prague, September 11-15, 2023)
+  - Registration deadeline of the Natural Language Division is **June 30th**
+
 <b>日本語の情報は後半にあります。</b>
-
-New! Regsitration deadline (with submission of self-match game logs) for the 2021 contest has extended to **July 30**, 2021 (2021/6/24)
-
-大会へのチーム登録の締め切り（予選＝自己対戦のログ提出も同時です）は**2021年7月30日**に延長されました!(2021/6/24)
 
 ## Background
 
@@ -33,7 +35,7 @@ A shared task participant of AIWolf NL Division is required to implement an AI w
 * After Day 1, the end of the days have votes by all players and an attack by a werewolf. Vote, attack, inspection are made via specific APIs (network communications).  
 * A day consists of a couple turns, where all of agents can make a talk for each turn, receiving talks of previous turns. 
 * (New from 2020) An agent is required to talk for each turn in the day, but the order within a talk is random. An agent could be asked to make a talk just after the previous talk, or after 8 talks (2 talks of 4 other agents) of other agents. 
-* An agent should make a talk within a specified periods after a talk request is sent. 
+* An agent should make a talk within a specified periods (planned to be within several minutes in AIWoldDial2023) after a talk request is sent. 
 * During days, Agents can communicate anything in natural language.  A talk should consists of normal letters and punctuations only. An agent returns "Skip" when nothing to talk, returns "Over" if nothing to talk anymore in that day.   
 * Use Agent[0x] (e.g. Agent[05], x is 1-5)  to mention other agents．
 * An anchor e.g. ">>Agent[0x]" could be inserted at the beginning of a talk to refer to another agent, to whom your agent with to talk with. That agent is assumed to respond something to your agent by using an anchor.
@@ -82,7 +84,7 @@ The same remote game server will be used both for the preliminary and final cont
 Our sample agent will connect to a specified local/remote game server by randomly selecting one of predefined talks.
 This agent is a reference implementation for server testing and connections in your agent development.
 
-## RandomTalkAgent: a sample agent code in Java
+## RandomTalkAgent: a sample agent and server code in Java
 
 Please clone the repository to your Eclipse environment and run the org.aiwolf.ui.bin.AutoStarter class with specifying AutoStarter.ini as its program argumen* https://github.com/aiwolfdial/RandomTalkAgent/blob/master/src/org/aiwolf/ui/bin/AutoStarter.java
 
@@ -98,9 +100,14 @@ in the .ini file above. The server location is currently
 * port: 10001
 
 Your log will be saved to 
-* https://kanolab.net/aiwolf/2021/pre/ (preliminary contest/trial runs) 
-* https://kanolab.net/aiwolf/2021/pre/ (final contest)
-Please submit your self-game logs (more than 50 games) as your registration (see https://sites.google.com/view/aiwolfdial2020/important-dates for details).
+* https://kanolab.net/aiwolf/2023/pre/ (preliminary contest/trial runs) 
+* https://kanolab.net/aiwolf/2023/pre/ (final contest)
+Please submit your self-game logs (more than 10 games) as your registration by notifying the organizers (aiwolf at kanolab.net) which log files are your submissions.
+
+## AIWolfNLAgentPython: a sample agent code in Python
+
+Coming soon!
+https://github.com/aiwolfdial/AIWolfNLAgentPython
 
 ## Example log file（self-match game）
 <pre>
@@ -205,13 +212,12 @@ Please submit your self-game logs (more than 50 games) as your registration (see
 2,result,4,0,VILLAGER
 </pre>
 
-## AIWolf Contest 2021
+## AIWolf Contest 2023
 
-We will hold the Natural Language Division of the 2021 AIWolf Contest as described in the following website.
-http://aiwolf.org/3rd-international-aiwolf-contest
-All of the required information is describe in this README.
-
-New! Regsitration deadline (with submission of self-match game logs) for the 2021 contest has extended to **July 30**, 2021 (2021/6/24)
+We will hold the Natural Language Division of the 2023 AIWolf Contest.
+All of the required information for the NL division is described in this README.
+Please refer to the AIWolf project website for information in general:
+http://aiwolf.org/5th-international-aiwolf-contest
 
 ## Previous Contests
 
@@ -246,7 +252,7 @@ See https://aiwolfdial.kanolab.net/ for details of the 2019 shared task and the 
 * talkでプレイヤーの名前を呼ぶ際はAgent[01]～Agent[05]の形式にしてください。(例：Agent[01]さんは人狼でした) Agent番号は二けたの任意の数字がありえます。
 * 「>>Agent[01] 」というようなアンカーをtalkの発言冒頭につけることで、特定のエージェントに向けた発話ができます。発話を向けられたエージェントは、なにか応答することが期待されます。
 * 発言はロボット等を使い，音声で再生される場合があります．したがって，音声で再生できない顔文字や絵文字，記号(句読点，！，？を除く)等の使用は控えてください。
-* 応答の制限時間は5秒とします。
+* 応答の制限時間は数分以内の予定ですが、検討中です。
 * 初日（Day 0）にもtalkが行われます。ここでは挨拶などを行うことを想定しています。
 * 1日は複数のターンで構成されている．朝は前日の夜に人狼に襲われたプレイヤーの発表と勝敗の判定を行い，昼はプレイヤー間で誰が人狼なのかを議論する．そして，一人一票誰を処刑したいかの投票を行い，最も多く投票されたプレイヤーは即座に処刑される．夜は特殊な行動を行うことが出来る役職の処理を行う．
 * (2020年度より) 昼の1ターンでは各エージェントが1度ずつ発話することが要求されるが，その順序はランダムです。そのため，発話直後に新たな発話を求められることや，前回の発話から8発話終わった後に新たな発話を求められることがあります。平均すると、1ターンに相当する5発話が渡されることになります。これにより、疑似的にランダムな発話に近い状況を再現するのが狙いです。
@@ -259,7 +265,8 @@ See https://aiwolfdial.kanolab.net/ for details of the 2019 shared task and the 
 
 ## 参加方法
 
-一名以上のチーム。参加資格は特にありません。どなたでも参加できます。参加者には大会後にシステムの詳細を記述したドキュメントをご提出いただきます。参加者にはANAC2021への論文提出を推奨します。
+一名以上のチーム。参加資格は特にありません。どなたでも参加できます。参加者には大会直後にシステムの詳細を記述したドキュメントをご提出いただきます（必須）。
+希望する参加者にはINLG 2023 Generation Challenge で発表できる論文提出を用意する可能性があります（検討中）。
 
 チームごとにaiwolf at kanolab.net (at を@にする)にメールにて送付をお願いいたします．必要事項は、チーム名、代表連絡先メールアドレス、代表者（および他のメンバー）氏名、所属名、氏名所属の公開可否（不可の場合はチーム名のみを用います）です。
 
@@ -289,7 +296,7 @@ E 発話表現は豊かか。エージェントごとに一貫して豊かなキ
 サンプルエージェントの実行には、このリポジトリを Eclipse にインポートし, 
 org.aiwolf.ui.bin.AutoStarter をメインクラスに、AutoStarter.iniをプログラム引数に実行すれば5人人狼で対戦ができます。（同じ実行構成も用意してあります）。https://github.com/aiwolfdial/RandomTalkAgent/blob/master/src/org/aiwolf/ui/bin/AutoStarter.java
 java.lang.ClassNotFoundException: com.sun.java.swing.plaf.windows.WindowsClassicLookAndFeel という例外が出ますが無視してください。
-デフォルトの設定では、ローカルで対戦サーバを起動し、RandamTalkAgents を五体接続します。
+デフォルトの設定では、ローカルで対戦サーバを起動し、RandomTalkAgents を五体接続します。
 設定の変更には、.ini ファイルを編集します：
 https://github.com/aiwolfdial/RandomTalkAgent/blob/master/res/AutoStarter.ini
 
@@ -300,11 +307,9 @@ https://github.com/aiwolfdial/RandomTalkAgent/blob/master/res/AutoStarter.ini
 * port: 10001
 
 対戦ログは 
-* https://kanolab.net/aiwolf/2021/pre/ (予選およびテスト用)
-* https://kanolab.net/aiwolf/2021/main/ (決勝)
-に保存されます。50ゲーム以上の対戦ログを、参加登録時にお送りください。詳細は 
-* https://sites.google.com/view/aiwolfdial2020/%E6%97%A5%E6%9C%AC%E8%AA%9E 
-をご覧ください。
+* https://kanolab.net/aiwolf/2023/pre/ (予選およびテスト用)
+* https://kanolab.net/aiwolf/2023/main/ (決勝)
+に保存されます。10ゲーム以上の対戦ログのファイル名リストを、参加登録時に主催者 aiwolf at kanolab.net あてにお送りください。
 
 ## 対戦ログの例（自己対戦の場合）
 <pre>
@@ -388,13 +393,11 @@ https://github.com/aiwolfdial/RandomTalkAgent/blob/master/res/AutoStarter.ini
 3,result,0,1,WEREWOLF
 </pre>
 
-# 人狼知能大会 2021 自然言語部門 
+# 人狼知能大会 2023 自然言語部門 
 
 大会全般の情報は公式サイト
-http://aiwolf.org/3rd-international-aiwolf-contest
+http://aiwolf.org/5th-international-aiwolf-contest
 も参照してください。自然言語部門に関しては、このREADMEにすべての情報が記載されています。
-
-大会へのチーム登録の締め切り（予選＝自己対戦のログ提出も同時です）は**2021年7月30日**に延長されました!(2021/6/24)
 
 ## 過去の大会情報
 
