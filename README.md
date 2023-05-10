@@ -110,7 +110,7 @@ Please submit your self-game logs (more than 10 games) as your registration by n
 
 ## AIWolfNLAgentPython: a sample agent code in Python
 
-Coming soon!
+Available here:
 https://github.com/aiwolfdial/AIWolfNLAgentPython
 
 ## Example log file（self-match game）
@@ -329,6 +329,11 @@ https://github.com/aiwolfdial/RandomTalkAgent/blob/master/res/AutoStarter.ini
 * https://kanolab.net/aiwolf/2023/pre/ (予選およびテスト用)
 * https://kanolab.net/aiwolf/2023/main/ (決勝)
 に保存されます。10ゲーム以上の対戦ログのファイル名リストを、参加登録時に主催者 aiwolf at kanolab.net あてにお送りください。
+
+## Pythonによるサンプルエージェントコード：AIWolfNLAgentPython
+
+こちらにあります：
+https://github.com/aiwolfdial/AIWolfNLAgentPython
 
 ## 対戦ログの例（自己対戦の場合）
 <pre>
