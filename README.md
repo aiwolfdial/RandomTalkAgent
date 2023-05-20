@@ -5,6 +5,12 @@
 * Updated this website for AIWolfDial NL 2023 (2023/4/28)
   - AIWolf Contest will be presented at INLG 2023 Generation Challenge https://inlg2023.github.io/ (Prague, September 11-15, 2023)
   - Registration deadeline of the Natural Language Division is **June 30th**
+* The formal NL contest server is not yet ready, please try with your own server (2023/5)
+
+* 本ウェブサイト（人狼知能大会 自然言語部門）を AIWolfDial 2023 向けに更新しました (2023/4/28)
+  - 人狼知能大会は INLG 2023 Generation Challenge  https://inlg2023.github.io/ (チェコ・プラハ, 2023/9/11-15開催) の一つとして結果発表します
+  - 自然言語部門の登録締め切りは ** 6月30日 ** です！
+* 自然言語部門の公式対戦サーバはまだ稼働していません。ご自身でサーバをたてて開発を進めてください(2023/5
 
 <b>日本語の情報は後半にあります。</b>
 
