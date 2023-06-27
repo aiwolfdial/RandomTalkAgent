@@ -98,7 +98,8 @@ This agent is a reference implementation for server testing and connections in y
 
 ## RandomTalkAgent: a sample agent and server code in Java
 
-Please clone the repository to your Eclipse environment and run the org.aiwolf.ui.bin.AutoStarter class with specifying AutoStarter.ini as its program argumen* https://github.com/aiwolfdial/RandomTalkAgent/blob/master/src/org/aiwolf/ui/bin/AutoStarter.java
+Please clone the repository to your Eclipse environment and run the org.aiwolf.ui.bin.AutoStarter class with specifying AutoStarter.ini as its program arguments:
+* https://github.com/aiwolfdial/RandomTalkAgent/blob/master/src/org/aiwolf/ui/bin/AutoStarter.java
 
 By default, this class will run a server and connect five RandamTalkAgents.
 
