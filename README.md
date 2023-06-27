@@ -89,20 +89,22 @@ Please not that vague utterances, that can be used regardless of contexts, are n
 This is a sample agent code and server runtime repository for the Natural Language Division of the AIWolf contest series.
 
 The contest will be held automatically by connecting five agents to our remote server. 
-We provide the same game server which can run locally, and a sample agent for your development/test uses.
+We provide the same game server which can run locally, and a sample agent for your development/test uses, both implemented in Java.
+If you develop your agent code in Java, the RandomTalkAgent is a good template code.
+If you develop your agent code in Python, please refer to the next section.
+
 The same five agents are used in the preliminary contest, while five different agents from five participants are used in the final contest.
 The same remote game server will be used both for the preliminary and final contests.
 
+## RandomTalkAgent: a sample agent and server code in Java
+
 Our sample agent will connect to a specified local/remote game server by randomly selecting one of predefined talks.
 This agent is a reference implementation for server testing and connections in your agent development.
-
-## RandomTalkAgent: a sample agent and server code in Java
 
 Please clone the repository to your Eclipse environment and run the org.aiwolf.ui.bin.AutoStarter class with specifying AutoStarter.ini as its program arguments:
 * https://github.com/aiwolfdial/RandomTalkAgent/blob/master/src/org/aiwolf/ui/bin/AutoStarter.java
 
 By default, this class will run a server and connect five RandamTalkAgents.
-
 You can change the behaviour by editing the .ini file:
 * https://github.com/aiwolfdial/RandomTalkAgent/blob/master/res/AutoStarter.ini
 
@@ -320,7 +322,8 @@ E 発話表現は豊かか。エージェントごとに一貫して豊かなキ
 このサイトでは、開発時向けに、ローカルで実行できるサーバそのものと、接続テストに利用可能なサンプルエージェントを配布しています。
 予選、決勝とも予選、決勝ともに同じ形式ですが、予選は自己対戦（自分のエージェントを五体起動して接続）、決勝は相互対戦（異なる参加者のエージェントを一体ずつ、計五体接続）になります。
 
-サンプルエージェントは、対戦サーバに接続し、決め打ちの発話をランダムに発するだけのテスト用実装です。サーバ接続テストや、接続まわりの参考実装としてお使いください。
+サンプルエージェントは、対戦サーバに接続し、決め打ちの発話をランダムに発するだけのテスト用実装です。サーバ接続テストや、接続まわりの参考実装としてお使いください。設定によっては（同時に、または単独で）ローカルで自前の対戦サーバを起動することができますが、大会に参加するエージェントは、単独のネットワーク接続エージェントとして動作する必要がありますのでテスト用としてお使いください。
+
 サンプルエージェントの実行には、このリポジトリを Eclipse にインポートし, 
 org.aiwolf.ui.bin.AutoStarter をメインクラスに、AutoStarter.iniをプログラム引数に実行すれば5人人狼で対戦ができます。（同じ実行構成も用意してあります）。https://github.com/aiwolfdial/RandomTalkAgent/blob/master/src/org/aiwolf/ui/bin/AutoStarter.java
 java.lang.ClassNotFoundException: com.sun.java.swing.plaf.windows.WindowsClassicLookAndFeel という例外が出ますが無視してください。
