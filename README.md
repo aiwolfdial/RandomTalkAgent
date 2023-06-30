@@ -2,7 +2,7 @@
 
 ## News
 
-* We **delay the registration deadline to July 3rd(Mon) AoE**, because we found a bug in the python agent template code, which does not return FINISH in the end of a game, resulting not start continuing next game. We will update our bugfix version soon. Please **secure your schedule from July 8th--11th** as much as possible, we plan to make the final match in these days. (2023/6/30)
+* We **delay the registration deadline to July 3rd(Mon) AoE**, because we found a bug in the python agent template code, which does not return FINISH in the end of a game, resulting not start continuing next game. We have updated our bugfix version in the other repository for Python agents. Please **secure your schedule from July 8th--11th** as much as possible, we plan to make the final match in these days. (2023/6/30)
 * Please **do not include newlines** and non-human-readable contents in your talk texts. **Any response such as a talk should end with a single newline (in Python agents)**. (2023/6/30)
 * The timeout is set to 5 minutes per talk request in the formal NL contest server! (2023/6/22)
 * The formal NL contest server is now ready! (2023/5/22)
@@ -10,7 +10,7 @@
   - AIWolf Contest will be presented at INLG 2023 Generation Challenge https://inlg2023.github.io/ (Prague, September 11-15, 2023)
   - Registration deadeline of the Natural Language Division is **June 30th**
 
-* **予選締め切りを7/3(月)AoEに延期**します。我々の提供するPythonエージェント例のコードに、ゲーム終了時にFINISHを返さず2ゲーム目が始められないというバグがあったためで、近日中に更新いたします。**本戦は7/8-11の間に予定しているため、できるだけ日程の確保をお願いします**。(2023/6/30)
+* **予選締め切りを7/3(月)AoEに延期**します。我々の提供するPythonエージェント例のコードに、ゲーム終了時にFINISHを返さず2ゲーム目が始められないというバグがあったためで、Pythonエージェントのリポジトリを更新いたしました。**本戦は7/8-11の間に予定しているため、できるだけ日程の確保をお願いします**。(2023/6/30)
 * Talkには**改行文字や人間が発音できないパターンを含めない**よう、お願いします。PythonエージェントではTalkは毎回単一の改行文字で終わる文字列を返してください。(2023/6/30)
 * 自然言語部門の公式対戦サーバで、発言（Talk）当たりのタイムアウトを5分に設定しました！(2023/6/22)
 * 自然言語部門の公式対戦サーバが稼働しました！(2023/5/22)
