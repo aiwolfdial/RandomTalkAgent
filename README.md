@@ -2,12 +2,16 @@
 
 ## News
 
+* We **delay the registration deadline to July 3rd(Mon) AoE**, because we found a bug in the python agent template code, which does not return FINISH in the end of a game, resulting not start continuing next game. We will update our bugfix version soon. Please **secure your schedule from July 8th--11th** as much as possible, we plan to make the final match in these days. (2023/6/30)
+* **A talk should end with a single newline**, but please **do not include newlines** and non-human-readable contents in your talk texts. (2023/6/30)
 * The timeout is set to 5 minutes per talk request in the formal NL contest server! (2023/6/22)
 * The formal NL contest server is now ready! (2023/5/22)
 * Updated this website for AIWolfDial NL 2023 (2023/4/28)
   - AIWolf Contest will be presented at INLG 2023 Generation Challenge https://inlg2023.github.io/ (Prague, September 11-15, 2023)
   - Registration deadeline of the Natural Language Division is **June 30th**
 
+* **予選締め切りを7/3(月)AoEに延期**します。我々の提供するPythonエージェント例のコードに、ゲーム終了時にFINISHを返さず2ゲーム目が始められないというバグがあったためで、近日中に更新いたします。**本戦は7/8-11の間に予定しているため、できるだけ日程の確保をお願いします**。(2023/6/30)
+* Talkは毎回単一の改行文字で終わる文字列を返してください。Talkには**ほかに改行文字や人間が発音できないパターンを含めない**よう、お願いします。(2023/6/30)
 * 自然言語部門の公式対戦サーバで、発言（Talk）当たりのタイムアウトを5分に設定しました！(2023/6/22)
 * 自然言語部門の公式対戦サーバが稼働しました！(2023/5/22)
 * 本ウェブサイト（人狼知能大会 自然言語部門）を AIWolfDial 2023 向けに更新しました (2023/4/28)
@@ -48,7 +52,7 @@ A shared task participant of AIWolf NL Division is required to implement an AI w
 * A day consists of a couple turns, where all of agents can make a talk for each turn, receiving talks of previous turns. 
 * (New from 2020) An agent is required to talk for each turn in the day, but the order within a talk is random. An agent could be asked to make a talk just after the previous talk, or after 8 talks (2 talks of 4 other agents) of other agents. 
 * An agent should make a talk within a specified periods (planned to be within several minutes in AIWoldDial2023) after a talk request is sent. 
-* During days, Agents can communicate anything in natural language.  A talk should consists of normal letters and punctuations only. An agent returns "Skip" when nothing to talk, returns "Over" if nothing to talk anymore in that day.   
+* During days, Agents can communicate anything in natural language.  A talk should end with a single newline, should consists of normal letters and punctuations only, i.e. alphabets, numbers, commas, periods, questions and exclamations, without newlines. An agent returns "Skip" when nothing to talk, returns "Over" if nothing to talk anymore in that day.   
 * Use Agent[0x] (e.g. Agent[05], x is 1-5)  to mention other agents．
 * An anchor e.g. ">>Agent[0x]" could be inserted at the beginning of a talk to refer to another agent, to whom your agent with to talk with. That agent is assumed to respond something to your agent by using an anchor.
 
@@ -281,7 +285,7 @@ ChatGPTをはじめとする大規模言語モデル（LLM）の性能向上は�
 * 会話パート（talk）では自然言語(日本語または英語)での対話を行います。プロトコルなど自然言語以外の使用は禁止です。発話しない場合はSkip、当該のdayで発話をしない場合はOverを返します（プロトコル部門と同じ）。投票、襲撃、占い先の指定などの方法はプロトコル部門と同じです。
 * talkでプレイヤーの名前を呼ぶ際はAgent[01]～Agent[05]の形式にしてください。(例：Agent[01]さんは人狼でした) Agent番号は二けたの任意の数字がありえます。
 * 「>>Agent[01] 」というようなアンカーをtalkの発言冒頭につけることで、特定のエージェントに向けた発話ができます。発話を向けられたエージェントは、なにか応答することが期待されます。
-* 発言はロボット等を使い，音声で再生される場合があります．したがって，音声で再生できない顔文字や絵文字，記号(句読点，！，？を除く)等の使用は控え、文字と句読点のみで構成してください。
+* 発言はロボット等を使い，音声で再生される場合があります．したがって，音声で再生できない顔文字や絵文字，記号(句読点，！，？を除く)等の使用は控え、文字と句読点のみで構成してください。改行文字は必ず一つTalkの最後に入れ、Talk途中には入れないでください。
 * 応答の制限時間は数分以内の予定ですが、検討中です。
 * 初日（Day 0）にもtalkが行われます。ここでは挨拶などを行うことを想定しています。
 * 1日は複数のターンで構成されている．朝は前日の夜に人狼に襲われたプレイヤーの発表と勝敗の判定を行い，昼はプレイヤー間で誰が人狼なのかを議論する．そして，一人一票誰を処刑したいかの投票を行い，最も多く投票されたプレイヤーは即座に処刑される．夜は特殊な行動を行うことが出来る役職の処理を行う．
